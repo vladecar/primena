@@ -11,7 +11,7 @@
 
 <center><h1>jQuery</h1></center>
 <center><button id = "1">Prvo dugme</button></center>
-
+<button id = "2">Drugo dugme</button>
 
 </body>
 
@@ -23,8 +23,12 @@ $(document).ready(function(){
 
 	$('#1').click(function(){
 		$('h1').css('color','green');
+});
+	$('#2').click(function(){
+	$.get("mesto/osma.php", function(data){
+		$('h1').after('<center>'+data+'</center>');
 	});
-
+});
 
 });
 </script>
